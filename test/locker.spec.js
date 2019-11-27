@@ -23,6 +23,7 @@ describe('locker', () => {
 
     it('should return a successfully message when use valid ticket to pickup package', () => {
         const locker = new Locker();
+        locker.store();
 
         const result = locker.pickup('shortid');
 
