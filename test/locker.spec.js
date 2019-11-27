@@ -11,4 +11,13 @@ describe('locker', () => {
 
         expect(result).toEqual('shortid');
     });
+
+    it('should return a full message when has no available cell', () => {
+        const locker = new Locker();
+        locker.available = 0;
+
+        const result = locker.store();
+
+        expect(result).toEqual('No available cell');
+    });
 });
