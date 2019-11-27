@@ -20,4 +20,12 @@ describe('locker', () => {
 
         expect(result).toEqual('No available cell');
     });
+
+    it('should return a successfully message when use valid ticket to pickup package', () => {
+        const locker = new Locker();
+
+        const result = locker.pickup('shortid');
+
+        expect(result).toEqual('Picked successfully');
+    });
 });

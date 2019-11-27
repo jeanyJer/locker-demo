@@ -13,6 +13,10 @@ class Locker {
         }
         return 'No available cell';
     }
+
+    pickup(ticket) {
+        return 'Picked successfully';
+    }
 }
 
 export default Locker;
