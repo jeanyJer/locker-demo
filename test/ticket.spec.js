@@ -1,4 +1,5 @@
 import shortid from "shortid";
+import Ticket from '../src/ticket';
 
 describe('ticket', () => {
     jest.spyOn(shortid, 'generate').mockReturnValue('shortid');
