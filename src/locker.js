@@ -7,8 +7,11 @@ class Locker {
     }
 
     store() {
-        this.available --;
-        return shortid.generate();
+        if (this.available) {
+            this.available --;
+            return shortid.generate();
+        }
+        return 'No available cell';
     }
 }
 
