@@ -1,9 +1,14 @@
+import shortid from "shortid";
+
 class Locker {
     constructor() {
+        this.capacity = 100;
+        this.available = this.capacity;
     }
 
     store() {
-        return 'ticket'
+        this.available --;
+        return shortid.generate();
     }
 }
 
