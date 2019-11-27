@@ -29,4 +29,13 @@ describe('locker', () => {
 
         expect(result).toEqual('Picked successfully');
     });
+
+    it('should return a failed message when use invalid ticket to pickup package', () => {
+        const locker = new Locker();
+        locker.store();
+
+        const result = locker.pickup('shortid111');
+
+        expect(result).toEqual('The ticket is invalid');
+    });
 });

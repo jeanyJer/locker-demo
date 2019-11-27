@@ -24,6 +24,7 @@ class Locker {
             this.available ++;
             return 'Picked successfully';
         }
+        return 'The ticket is invalid';
     }
 }
 
