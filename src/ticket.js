@@ -17,6 +17,7 @@ class Ticket {
             _.pull(this.tickets, ticket);
             return true;
         }
+        return false;
     }
 }
 

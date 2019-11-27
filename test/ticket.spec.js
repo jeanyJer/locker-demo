@@ -20,4 +20,13 @@ describe('ticket', () => {
 
         expect(result).toEqual(true);
     });
+
+    it('should return false when destroy a invalid ticket', () => {
+        const ticket = new Ticket();
+        ticket.create();
+
+        const result = ticket.destroy('shortid123');
+
+        expect(result).toEqual(false);
+    });
 });
