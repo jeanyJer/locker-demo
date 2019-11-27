@@ -38,4 +38,14 @@ describe('locker', () => {
 
         expect(result).toEqual('The ticket is invalid');
     });
+
+    it('should not pickup package twice with the same ticket', () => {
+        const locker = new Locker();
+        locker.store();
+        locker.pickup('shortid');
+
+        const result = locker.pickup('shortid');
+
+        expect(result).toEqual('The ticket is invalid');
+    });
 });
