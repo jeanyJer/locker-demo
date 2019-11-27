@@ -11,4 +11,13 @@ describe('ticket', () => {
 
         expect(result).toEqual('shortid');
     });
+
+    it('should return true when destroy a valid ticket', () => {
+        const ticket = new Ticket();
+        ticket.create();
+
+        const result = ticket.destroy('shortid');
+
+        expect(result).toEqual(true);
+    });
 });
